@@ -1,0 +1,60 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CrunchiGo - Crunchy Snacks</title>
+<style>
+body {margin:0;font-family:Arial;background:#fff8f0;}
+header {background:#ff6600;color:white;padding:15px;text-align:center;font-size:24px;font-weight:bold;}
+nav {display:flex;justify-content:center;gap:20px;background:#333;padding:10px;}
+nav a {color:white;text-decoration:none;}
+.banner {background:url('https://images.unsplash.com/photo-1604908176997-4317d2c7d7c2');height:250px;background-size:cover;display:flex;align-items:center;justify-content:center;color:white;font-size:30px;font-weight:bold;}
+.products {display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:20px;padding:20px;}
+.card {background:white;padding:15px;border-radius:10px;box-shadow:0 2px 10px rgba(0,0,0,0.1);text-align:center;}
+button {background:#ff6600;color:white;border:none;padding:10px;border-radius:5px;cursor:pointer;}
+.cart {position:fixed;right:10px;top:10px;background:white;padding:10px;border-radius:10px;box-shadow:0 0 10px rgba(0,0,0,0.2);}
+footer {background:#333;color:white;text-align:center;padding:10px;margin-top:20px;}
+</style>
+</head>
+<body>
+<header>🥔 CrunchiGo</header>
+<nav>
+<a href="#">Home</a>
+<a href="#products">Products</a>
+<a href="#cart">Cart</a>
+</nav>
+<div class="banner">Har Bite Mein Crunch!</div><div class="cart" id="cart">Cart: 0 items</div><section id="products" class="products">
+<div class="card">
+<img src="https://images.unsplash.com/photo-1585238342028-4c9e6d6b8f9d" width="100%">
+<h3>Classic Chips</h3>
+<p>₹20</p>
+<button onclick="addToCart()">Add to Cart</button>
+</div><div class="card">
+<img src="https://images.unsplash.com/photo-1617196038434-3c1b90e1c13d" width="100%">
+<h3>Spicy Chips</h3>
+<p>₹30</p>
+<button onclick="addToCart()">Add to Cart</button>
+</div><div class="card">
+<img src="https://images.unsplash.com/photo-1590080875852-ba44f83ff6d7" width="100%">
+<h3>Masala Chips</h3>
+<p>₹25</p>
+<button onclick="addToCart()">Add to Cart</button>
+</div>
+</section><section style="padding:20px; text-align:center;">
+<h2>Checkout</h2>
+<input placeholder="Enter Name"><br><br>
+<input placeholder="Address"><br><br>
+<button onclick="payNow()">Pay Now</button>
+</section><footer>
+© 2026 CrunchiGo | All Rights Reserved
+</footer><script>
+let count = 0;
+function addToCart(){
+count++;
+document.getElementById('cart').innerText = 'Cart: ' + count + ' items';
+}
+function payNow(){
+alert('Payment Successful! 🎉');
+}
+</script></body>
+</html>
